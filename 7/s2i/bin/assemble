@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -e
+
+echo "---> Build started at `date`"
+
+echo "---> Preparing source..."
+cp -Rf /tmp/src/. .
+
+# fix source directory permissions
+fix-permissions ./
+
+################################################################################
+# Example assemble script to be placed in $srcdir/.s2i/bin/assemble
+################################################################################
+#
+# #!/bin/bash
+#
+# # Source base assemble script.
+# source /usr/libexec/s2i/assemble 
+# 
+# mkdir build
+# cd build
+# cmake .. -DCMAKE_BUILD_TYPE=Release
+# make -j`nproc`

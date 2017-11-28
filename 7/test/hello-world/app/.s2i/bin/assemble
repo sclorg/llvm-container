@@ -1,0 +1,2 @@
+source /usr/libexec/s2i/assemble
+make
