@@ -1,7 +1,11 @@
-This is an S2I for LLVM 5.0.x
+#!/bin/bash
+
+cat <<EOF
+This is an S2I for LLVM $LLVM_VERSION
 To use it, install S2I: https://github.com/openshift/source-to-image
 
-You will need to add your own assemble / run scripts to /.s2i/bin
+You will need to add your own assemble / run scripts to $srcdir/.s2i/bin
 for building and running your code.   You can find examples at
 https://github.com/sclorg/llvm-container/tree/master/7/test/hello-world/app
 
+EOF
