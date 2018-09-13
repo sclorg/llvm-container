@@ -58,7 +58,7 @@ function test_sanity_clang_usage () {
   docker run --rm $IMAGE_NAME clang -v &> $TMPDIR/actual-clang-v
   check_result "Exit code is zero" $? 0
 
-  grep 'clang version 4\.0\.1' $TMPDIR/actual-clang-v &> /dev/null
+  grep 'clang version 5\.0\.1' $TMPDIR/actual-clang-v &> /dev/null
   check_result "Output contains clang version" $? 0
 
   grep 'Target: x86_64-unknown-linux-gnu' $TMPDIR/actual-clang-v &> /dev/null
@@ -71,7 +71,7 @@ function test_sanity_lldb_usage () {
   docker run --rm $IMAGE_NAME lldb -v &> $TMPDIR/actual-lldb-v
   check_result "Exit code is zero" $? 0
 
-  grep 'lldb version 4\.0\.1' $TMPDIR/actual-lldb-v &> /dev/null
+  grep 'lldb version 5\.0\.1' $TMPDIR/actual-lldb-v &> /dev/null
   check_result "Output contains lldb version" $? 0
 }
 
